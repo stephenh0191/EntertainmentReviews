@@ -3,11 +3,12 @@
 		<h1>Edit </h1>
 
 		<%= simple_form_for @movie, html: {multipart: true} do |f| %>
-			<%= f.select :genre_id, @genres %>
-		  <%= f.input :title, label: "Title" %>
-		  <%= f.input :description %>
-		  <%= f.input :director %>
-		  <%= f.button :submit %>
+		<%= f.file_field :movie_img %>
+		<%= f.select :genre_id, @genres %>
+		<%= f.input :title, label: "Title" %>
+		<%= f.input :description %>
+		<%= f.input :director %>
+		<%= f.button :submit %>
 		<% end %>
 	</div>
 </div

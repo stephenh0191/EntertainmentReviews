@@ -1,6 +1,7 @@
 <%= simple_form_for @movie do |f| %>
+	  <%= f.file_field :movie_img %>
 	<%= select_tag(:genre_id, options_for_select(@genres), :prompt => "Select Genre") %>
-  <%= f.file_field :movie_img %>
+
   <%= f.input :title, label: "Title" %>
   <%= f.input :description %>
   <%= f.input :director %>
