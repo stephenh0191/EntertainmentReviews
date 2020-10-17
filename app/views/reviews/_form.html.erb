@@ -5,3 +5,10 @@
 	<%= f.input :comment %>
 	<%= f.button :submit, :class => "btn-custom2" %>
 <% end %>
+
+<script>
+	$('#rating-form').raty({
+		path: '/assets/',
+		scoreName: 'review[rating]'
+	});
+</script>
