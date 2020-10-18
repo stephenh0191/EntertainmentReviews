@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
-before_action :find_play
+	before_action :find_movie 
 	before_action :find_review, only: [:edit, :update, :destroy]
-	before_action :authenticate_user!, only: [:new, :edit]
+	before_action :authenticate_user!, only: [:new,:edit]
 
 	def new
 		@review = Review.new
@@ -9,7 +9,7 @@ before_action :find_play
 
 	def create
 		@review = Review.new(review_params)
-		@review.play_id = @movie.id
+		@review.movie_id = @movie_id
 		@review.user_id = current_user.id
 
 		if @review.save
@@ -22,7 +22,7 @@ before_action :find_play
 	def edit
 	end
 
-	def update	
+	def update
 		if @review.update(review_params)
 			redirect_to movie_path(@movie)
 		else
@@ -35,18 +35,19 @@ before_action :find_play
 		redirect_to movie_path(@movie)
 	end
 
-	private 
+	
 
-		def review_params
-			params.require(:review).permit(:rating, :comment)
-		end
+	private
 
-		def find_play
-			@movie = Movie.find(params[:play_id])
-		end
+	def review_params
+		params.require(:review).permit(:rating, :comment)
+	end
 
-		def find_review
-			@review = Review.find(params[:id])
-		end
+	def find_movie
+		@movie = Movie.find(params[:movie_id])
+	end
 
+	def find_review
+		@review = Review.find(params[:id])
+	end
 end

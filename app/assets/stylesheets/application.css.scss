@@ -141,7 +141,7 @@ p.alert, p.notice {
 
 }
 
-.play-links {
+.movie-links {
 
 	.btn-custom {
 		padding: 3px 10px;
@@ -153,23 +153,23 @@ p.alert, p.notice {
 
 /* Play styles */
 
-.play {
+.movie {
 	height: 350px;
 	width: 250px;
 	margin-bottom: 40px;
 	@include background-tile;
 }
 
-.play-show {
+.movie-show {
 	height: 475px;
 	width: 325px;
 	@include background-tile;
 }
 
-.play-info {
+.movie-info {
 	@include background-tile;
 
-	.play-title {
+	.movie-title {
 		margin-top: 0;
 		font-size: 4em;
 		font-weight: bold;
@@ -187,7 +187,7 @@ p.alert, p.notice {
 		font-style: italic;
 	}
 
-	.play-director {
+	.movie-director {
 		font-size: 1.5em;
 		margin-top: 10px;
 		margin-bottom: 10px;
@@ -198,7 +198,7 @@ p.alert, p.notice {
 		}	
 	}
 
-	.play-desc {
+	.movie-desc {
 		font-size: 1.05em;
 		line-height: 1.5;
 		margin-bottom: 15px;
@@ -208,9 +208,9 @@ p.alert, p.notice {
 }
 
 
-/* current-category styles */
+/* current-genre styles */
 
-.current-category {
+.current-genre {
 	margin-bottom: 40px;
 }
 
@@ -249,7 +249,7 @@ p.alert, p.notice {
 
 /* New Play Form styles */
 
-.new-play-form {
+.new-movie-form {
 	@include background-tile;
 
 	h1 {
@@ -270,7 +270,7 @@ p.alert, p.notice {
 
 /* Edit Play Form styles */
 
-.edit-play-form {
+.edit-movie-form {
 
 	@include background-tile;
 
@@ -279,11 +279,11 @@ p.alert, p.notice {
 		font-weight: bold;
 	}
 
-	#play_category_id {
+	#movie_genre_id {
 		margin-bottom: 10px;
 	}
 
-	#play_play_img {
+	#movie_movie_img {
 		margin-bottom: 10px;
 	}
 
